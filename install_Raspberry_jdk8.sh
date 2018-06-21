@@ -4,9 +4,7 @@ export MINTUSR=$MINTPATH/usr
 export TARGET_MINT=/MinT
 export TARGET_MINTUSR=$TARGET_MINT/usr
 echo "Make MINT Location"
-rm -rf /MinT
-mkdir /MinT
-mkdir /MinT/usr
+mkdir -p /MinT/usr
 echo "install java"
 tar xzvf $MINTUSR/jdk-8u121-linux-arm32-vfp-*.gz -C $TARGET_MINTUSR
 echo "install wiringPi"
