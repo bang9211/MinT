@@ -9,9 +9,9 @@ mkdir /MinT
 mkdir /MinT/usr
 echo "install java"
 tar xzvf $MINTUSR/jdk-8u121-linux-arm32-vfp-*.gz -C $TARGET_MINTUSR
-echo "install wiringPi”
+echo "install wiringPi"
 cp -rf $MINTUSR/wiringPi $TARGET_MINTUSR
-cd wiringPi
+cd $TARGET_MINTUSR/wiringPi
 ./build
 echo "set bashrc"
-cp -rf ./conf/bashrc ~/.bashrc_Raspberry_jdk8
+cp -rf $MINTPATH/conf/bashrc_Raspberry_jdk8 ~/.bashrc
